@@ -1,0 +1,69 @@
+startchen
+left to right direction
+'======================
+' Relacionamento 1 : 1
+'======================
+
+entity Carro {
+    Placa <<key>>
+    Modelo
+    Ano
+}
+
+relationship pertence {
+}
+
+entity Proprietario {
+    Nome
+    CPF <<key>>
+}
+
+Carro -1- pertence
+pertence -1- Proprietario
+
+'======================
+' Relacionamento 1 : N
+'======================
+
+entity Medico {
+    CRM <<key>>
+    Especialidade
+}
+
+relationship atende {
+    DataConsulta
+}
+
+entity Paciente {
+    Nome
+    RG <<key>>
+    Idade
+}
+
+Medico -1- atende
+Paciente -n- atende
+
+'======================
+' Relacionamento N : N
+'======================
+
+entity Livro {
+    ISBN <<key>>
+    Titulo
+    Autor
+}
+
+relationship emprestimo {
+    DataEmprestimo
+    DataDevolucao
+}
+
+entity Biblioteca {
+    Nome
+    Localizacao
+    Codigo <<key>>
+}
+
+Livro -n- emprestimo
+Biblioteca -n- emprestimo
+@endchen
