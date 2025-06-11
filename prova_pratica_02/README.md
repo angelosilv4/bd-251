@@ -33,7 +33,7 @@ As consultas foram desenvolvidas no **DB Browser for SQLite**, com prints das ex
 
 ## 🛠️ Execução
 
-As queries foram executadas no **DB Browser for SQLite** com o arquivo `Chinook_Sqlite.sqlite`.
+As queries foram executadas no **DB Browser for SQLite** com o arquivo `Chinook.sqlite`.
 
 ---
 
